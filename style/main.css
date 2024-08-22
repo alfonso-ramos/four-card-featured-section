@@ -29,17 +29,19 @@ body {
 .container {
     max-width: 120rem;
     width: 90%;
-    margin: 0 auto;
+    margin: 8.5rem auto;
 }
 
 a {
     text-decoration: none;
 }
+
 h1 {
     font-weight: 100;
     font-size: 2.4rem;
     color: var(--gray);
     margin-bottom: 1.6rem;
+    line-height: 3.5rem;
 }
 
 h2 {
@@ -59,74 +61,106 @@ p {
     margin: 0;
 }
 
-img {
-    
-
+.card-container {
+    margin-top: 7.6rem;
+    display: grid;
+    gap: 1.6rem;
+    justify-content: center;
 }
-
-.card{
-    min-width: 33.1rem; 
+.card {
+    min-width: 33.1rem;
     border-radius: .8rem;
-    margin-bottom: 1.6rem;box-shadow: 14px 10px 21px 0px rgba(0,0,0,0.18);
-    -webkit-box-shadow: 14px 10px 21px 0px rgba(0,0,0,0.18);
-    -moz-box-shadow: 14px 10px 21px 0px rgba(0,0,0,0.18);
+    margin-bottom: 1.6rem;
+    box-shadow: 14px 10px 21px 0px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 14px 10px 21px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 14px 10px 21px 0px rgba(0, 0, 0, 0.18);
 }
-.color-line1{
+
+.color-line1 {
     background-color: var(--turquoise);
     height: 4px;
     width: 100%;
     border-radius: .8rem .8rem 0 0;
 }
-.color-line2{
+
+.color-line2 {
     background-color: var(--red);
     height: 4px;
     width: 100%;
     border-radius: .8rem .8rem 0 0;
 }
-.color-line3{
+
+.color-line3 {
     background-color: var(--yellow);
     height: 4px;
     width: 100%;
     border-radius: .8rem .8rem 0 0;
 }
-.color-line4{
+
+.color-line4 {
     background-color: var(--blue);
     height: 4px;
     width: 100%;
     border-radius: .8rem .8rem 0 0;
 }
-.card-content{
+
+.card-content {
     padding: 1.6rem;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
 .card-image{
     width: 5.7rem;
     height: 5.7rem;
-    margin-left: 10rem;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-top: 1.6rem;
+
 }
 
-@media (min-width: 1024px){
-    .card1{
+@media (min-width: 1024px) {
+    h1{
+        font-size: 3.6rem;
+    }
+    .main-text-container {
+        margin: 0 auto;
+        width: 54rem;
+        text-align: center;
+    }
+    .main-text-container p{
+        margin-top: 1.6rem;
+    }
+    .card {
+        max-width: 35rem;
+    }
+    .card1 {
         grid-area: first;
     }
-    .card2{
+
+    .card2 {
         grid-area: second;
     }
-    .card3{
+
+    .card3 {
         grid-area: thirth;
     }
-    .card4{
+
+    .card4 {
         grid-area: fourth;
     }
-    .card-container{
-        display: grid;
+    .card-container {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
-        ". second ."
-        "first second fourth"
-        "first thirth fourth"
-        ". thirth ."
-        ;
-        gap: 1.6rem;
+            ". second ."
+            "first second fourth"
+            "first thirth fourth"
+            ". thirth .";
+        width: 100%;
+        max-width: 111rem;
+        margin: 6.4rem auto;
+
     }
 }
